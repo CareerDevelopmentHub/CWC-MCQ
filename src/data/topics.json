@@ -65,7 +65,7 @@
     {
         "name": "C Programming",
         "code": "C",
-        "slots": 1,
+        "slots": 2,
         "ignore": [
             "SS",
             "SR",
@@ -81,7 +81,7 @@
     {
         "name": "App Development",
         "code": "APP",
-        "slots": 1,
+        "slots": 2,
         "ignore": [
             "NP",
             "OM"
@@ -95,7 +95,7 @@
     {
         "name": "Web Development",
         "code": "WEB",
-        "slots": 1,
+        "slots": 2,
         "ignore": [
             "SS"
         ],
@@ -119,7 +119,7 @@
     {
         "name": "Python Programming",
         "code": "PYTHON",
-        "slots": 1,
+        "slots": 2,
         "coverage": [
             "SR"
         ],
@@ -128,7 +128,7 @@
     {
         "name": "Computer Networking",
         "code": "NET",
-        "slots": 1,
+        "slots": 3,
         "coverage": [
             "SS",
             "NP",
@@ -150,7 +150,7 @@
     {
         "name": "Psudo Code",
         "code": "PSUDO",
-        "slots": 1,
+        "slots": 2,
         "coverage": [
             "OM",
             "SS"
