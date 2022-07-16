@@ -3,7 +3,7 @@ name: Alert
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 7-22 * * *"
+        - cron: "0 1-16 * * *"
 
 jobs:
     build:
