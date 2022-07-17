@@ -2,7 +2,7 @@ import React from "react";
 
 import Navigation from "../../components/Navbar";
 import { connect } from "react-redux";
-import { Container, Placeholder, Table } from "react-bootstrap";
+import { Button, Container, Placeholder, Table } from "react-bootstrap";
 import _ from "lodash";
 
 const mapStateToProps = (state) => {
@@ -67,6 +67,10 @@ class About extends React.Component {
             }
         }
         return schedule;
+    }
+
+    showTimetable() {
+        fetch("/mcq-get/timetable")
     }
 
     render() {
@@ -157,6 +161,7 @@ class About extends React.Component {
                                     ))}
                                 </tbody>
                             </Table>
+                            <Button variant="primary" onClick={this.showTimetable()}>Show Timetable</Button>
                         </>
                     </Container>
                 )}

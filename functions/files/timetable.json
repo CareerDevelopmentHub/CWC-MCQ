@@ -33,7 +33,7 @@
         "S3": {
             "topic": "CQ",
             "ignore": false,
-            "assignee": "RG"
+            "assignee": "SD"
         },
         "S4": {
             "topic": "",
@@ -86,12 +86,12 @@
         "S1": {
             "topic": "DSA",
             "ignore": false,
-            "assignee": "RG"
+            "assignee": "SD"
         },
         "S2": {
             "topic": "CNS",
             "ignore": false,
-            "assignee": "RG"
+            "assignee": "SD"
         },
         "S3": {
             "topic": "CQ",

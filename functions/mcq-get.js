@@ -8,6 +8,7 @@ const {
     compact,
     matches,
     flattenDeep,
+    entries,
 } = require("lodash");
 
 const auth = require("./utils/auth");
@@ -17,6 +18,8 @@ const moment = require("moment");
 
 const configs = require("./files/configs.json");
 const timetable = require("./files/timetable.json");
+const telegram = require("./utils/telegram");
+const base = require("./utils/base");
 const { API_KEY: api_key } = process.env;
 
 exports.handler = async (event, context) => {
@@ -44,107 +47,6 @@ exports.handler = async (event, context) => {
     } else console.log({ authentication, api_authentication });
 
     if (path === "schedule") {
-        const { value: query, error } = validate.validateMCQschedule(
-            Object.fromEntries(new URLSearchParams(event.rawQuery))
-        );
-
-        if (error) {
-            return {
-                statusCode: 400,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    error: map(error.details, "message"),
-                    OK: false,
-                }),
-                isBase64Encoded: false,
-            };
-        }
-
-        try {
-            if (!authentication) throw Error("Unauthorized");
-            const collection = database.collection("questions");
-            const results = await collection
-                .where("week", "==", moment().utcOffset("+05:30").week())
-                .where("year", "==", moment().utcOffset("+05:30").year())
-                .orderBy("date", "desc")
-                .get();
-
-            const result = find(results.docs, (r) =>
-                matches({
-                    approved: true,
-                    topic: query.topic,
-                    author: contributor.code,
-                })(r.data())
-            );
-
-            if (result && !contributor.admin) {
-                throw Error(
-                    `Question with given topic is already posted by contributor: ${contributor.name}`
-                );
-            }
-
-            const [schedule] = compact(
-                flattenDeep(
-                    Object.keys(timetable).map((day) => {
-                        return Object.keys(timetable[day]).map((slot) => {
-                            const { assignee, topic } = timetable[day][slot];
-
-                            if (
-                                assignee === contributor.code &&
-                                topic === query.topic
-                            ) {
-                                return configs.slots.map((s) => {
-                                    return (
-                                        s.code === slot &&
-                                        moment()
-                                            .utcOffset("+05:30")
-                                            .day(day)
-                                            .hour(s.startHr)
-                                            .minute(0)
-                                            .second(0)
-                                            .unix()
-                                    );
-                                });
-                            } else return undefined;
-                        });
-                    })
-                )
-            );
-
-            if (!schedule && !contributor.admin) {
-                throw Error(
-                    `Current timetable doesn't allow posting this topic from contributor ${contributor.name}.`
-                );
-            }
-
-            return {
-                statusCode: 200,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    OK: true,
-                    schedule:
-                        schedule ||
-                        moment().utcOffset("+05:30").second(0).unix(),
-                }),
-                isBase64Encoded: false,
-            };
-        } catch (error) {
-            return {
-                statusCode: 500,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    error: error.message,
-                    OK: false,
-                }),
-                isBase64Encoded: false,
-            };
-        }
     } else if (path === "list") {
         const { value: query, error } = validate.validateMCQList(
             Object.fromEntries(new URLSearchParams(event.rawQuery))
@@ -314,3 +216,138 @@ exports.handler = async (event, context) => {
         }
     }
 };
+
+class mcq_get extends base {
+    error(message) {
+        throw new Error(message);
+    }
+
+    async execute() {
+        await this.authenticate();
+        this.telegram = new telegram();
+
+        if (!this.auth) {
+            return this.resp_404();
+        }
+
+        switch (this.path) {
+            case "/mcq-post/create":
+                return this.create();
+            case "/mcq-post/edit":
+                return this.edit();
+            case "/mcq-post/review":
+                return this.review();
+            case "/mcq-post/publish":
+                return this.publish();
+            default:
+                return this.resp_404();
+        }
+    }
+
+    async schedule() {
+        const { value: query, error: err } = validate.validateMCQschedule(
+            Object.fromEntries(new URLSearchParams(this.query))
+        );
+
+        try {
+            let schedule;
+            err && this.error(err);
+            !this.auth && this.error("Unauthorized");
+            const collection = database.collection("questions");
+            const results = await collection
+                .where("week", "==", moment().utcOffset("+05:30").week())
+                .where("year", "==", moment().utcOffset("+05:30").year())
+                .orderBy("date", "desc")
+                .get();
+
+            const result = find(results.docs, (r) =>
+                matches({
+                    approved: true,
+                    topic: query.topic,
+                    author: this.user.code,
+                })(r.data())
+            );
+
+            result &&
+                !this.user.admin &&
+                this.error(`Question with given topic is already posted.`);
+
+            for (const [day, slots] of entries(timetable)) {
+                for (const [slot, { topic, assignee }] of entries(slots)) {
+                    assignee === this.user.code &&
+                        topic === this.query.topic &&
+                        (() => {
+                            const { startHr } = find(configs, { code: slot });
+                            schedule = moment()
+                            .utcOffset("+05:30")
+                            .day(day)
+                            .hour(s.startHr)
+                            .minute(0)
+                            .second(0)
+                            .unix()
+                        })();
+                }
+            }
+
+            compact(
+                flattenDeep(
+                    Object.keys(timetable).map((day) => {
+                        return Object.keys(timetable[day]).map((slot) => {
+                            const { assignee, topic } = timetable[day][slot];
+
+                            if (
+                                assignee === contributor.code &&
+                                topic === query.topic
+                            ) {
+                                return configs.slots.map((s) => {
+                                    return (
+                                        s.code === slot &&
+                                        moment()
+                                            .utcOffset("+05:30")
+                                            .day(day)
+                                            .hour(s.startHr)
+                                            .minute(0)
+                                            .second(0)
+                                            .unix()
+                                    );
+                                });
+                            } else return undefined;
+                        });
+                    })
+                )
+            );
+
+            if (!schedule && !contributor.admin) {
+                throw Error(
+                    `Current timetable doesn't allow posting this topic from contributor ${contributor.name}.`
+                );
+            }
+
+            return {
+                statusCode: 200,
+                headers: {
+                    "content-type": `application/json`,
+                },
+                body: JSON.stringify({
+                    OK: true,
+                    schedule:
+                        schedule ||
+                        moment().utcOffset("+05:30").second(0).unix(),
+                }),
+                isBase64Encoded: false,
+            };
+        } catch (error) {
+            return {
+                statusCode: 500,
+                headers: {
+                    "content-type": `application/json`,
+                },
+                body: JSON.stringify({
+                    error: error.message,
+                    OK: false,
+                }),
+                isBase64Encoded: false,
+            };
+        }
+    }
+}
