@@ -33,10 +33,10 @@ const response = {
     PUBLISH_SUCCESS: "Question successfully published on telegram.",
 };
 
-const strings = {
+const string = {
     error,
     message,
     response,
 };
 
-module.exports = strings;
+module.exports = string;

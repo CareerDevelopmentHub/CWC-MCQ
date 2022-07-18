@@ -71,7 +71,7 @@ const headers = { key: process.env.api_key || "12345" };
             let text = `Here is the list of defaulters for #${week}week${year}:\n\n${defaulter}`;
             text += `\n\nRepeated violations will be reported to club's core team resulting in unfavourable situations.`;
 
-            fetch(`${process.env.baseUrl}/telegram`, {
+            fetch(`${process.env.baseUrl}/request/telegram`, {
                 body: JSON.stringify({ text, pin: true }),
                 method: "POST",
                 headers,

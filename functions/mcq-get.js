@@ -14,7 +14,7 @@ const validate = require("./utils/validate");
 const configs = require("./files/configs.json");
 const { database } = require("./utils/firebase");
 const timetable = require("./files/timetable.json");
-const { error } = require("./utils/strings");
+const { error } = require("./utils/string");
 const base = require("./utils/base");
 
 exports.handler = async (event, _context) => {
@@ -109,7 +109,7 @@ class mcq_get extends base {
             const question = await collection.doc(docId).get();
 
             (!question.exists || !(question.data().approved || this.auth)) &&
-                this.#error("Question not found");
+                this.#error(error.QUESTION_NOT_FOUND);
 
             const omitParams = [
                 "admin_message_id",
@@ -135,7 +135,7 @@ class mcq_get extends base {
             Object.assign(docData, { docId });
             return this.resp_200({ response: docData });
         } catch (error) {
-            return this.resp_500({error: error.message});
+            return this.resp_500({ error: error.message });
         }
     }
 

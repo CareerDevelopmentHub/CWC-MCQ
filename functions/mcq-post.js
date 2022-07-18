@@ -1,9 +1,9 @@
 const moment = require("moment");
 const fetch = require("node-fetch");
-const { uniq, indexOf } = require("lodash");
+const { uniq, indexOf, sample } = require("lodash");
 const validate = require("./utils/validate");
 const { database, storage } = require("./utils/firebase");
-const { error, response } = require("./utils/strings");
+const { error, response } = require("./utils/string");
 const telegram = require("./utils/telegram");
 const base = require("./utils/base");
 
@@ -42,15 +42,42 @@ class mcq_post extends base {
     async #code2img(id, language, code) {
         const url = new URL("https://code2img.vercel.app/api/to-image");
 
+        const theme = sample([
+            "a11y-dark",
+            "atom-dark",
+            "base16-ateliersulphurpool.light",
+            "cb",
+            "darcula",
+            "default",
+            "dracula",
+            "duotone-dark",
+            "duotone-earth",
+            "duotone-forest",
+            "duotone-light",
+            "duotone-sea",
+            "duotone-space",
+            "ghcolors",
+            "hopscotch",
+            "material-dark",
+            "material-light",
+            "material-oceanic",
+            "nord",
+            "pojoaque",
+            "shades-of-purple",
+            "synthwave84",
+            "vs",
+            "vsc-dark-plus",
+            "xonokai",
+        ]);
+
         try {
             const file = storage.file(`${id}.png`);
             const [exists] = await file.exists();
 
             if (language && code) {
-                url.searchParams
-                    .set("theme", this.configs.theme)
-                    .set("language", language)
-                    .set("padding", 0);
+                url.searchParams.set("language", language);
+                url.searchParams.set("theme", theme);
+                url.searchParams.set("padding", 0);
 
                 const response = await fetch(url, {
                     method: "POST",
@@ -73,8 +100,11 @@ class mcq_post extends base {
                 expires: moment().add(1, "month").toDate(),
             });
 
+            console.log(screenshot);
+
             return screenshot;
         } catch (error) {
+            console.log(error.message);
             return null;
         }
     }
@@ -219,7 +249,7 @@ class mcq_post extends base {
         const {
             error: err,
             value: { id },
-        } = validate.validateMCQpost(
+        } = validate.validateMCQpublish(
             Object.fromEntries(new URLSearchParams(this.query))
         );
 

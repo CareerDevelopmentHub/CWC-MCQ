@@ -32,6 +32,8 @@ function main() {
     const year = moment().utcOffset("+05:30").year();
     const slot = configs.slots.find((s) => hour >= s.startHr && hour < s.endHr);
 
+    console.log(day, hour, week, year, slot)
+
     if (!slot) {
         return [true, "No active slot running. Alert job cancelled."];
     }
@@ -134,7 +136,7 @@ function main() {
         else throw Error(response);
     } catch (e) {
         console.log(`Error: ${e.message.replace(/<[^>]+>/g, "")}`);
-        fetch(`${baseUrl}/telegram`, {
+        fetch(`${baseUrl}/request/telegram`, {
             body: JSON.stringify({ text: String(e.message) }),
             method: "POST",
             headers,
