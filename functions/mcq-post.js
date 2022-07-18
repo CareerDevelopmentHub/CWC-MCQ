@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const { uniq, indexOf } = require("lodash");
 const validate = require("./utils/validate");
 const { database, storage } = require("./utils/firebase");
-const { error, response } = require("./utils/strings");
+const { error, response } = require("./utils/string");
 const telegram = require("./utils/telegram");
 const base = require("./utils/base");
 
@@ -219,7 +219,7 @@ class mcq_post extends base {
         const {
             error: err,
             value: { id },
-        } = validate.validateMCQpost(
+        } = validate.validateMCQpublish(
             Object.fromEntries(new URLSearchParams(this.query))
         );
 

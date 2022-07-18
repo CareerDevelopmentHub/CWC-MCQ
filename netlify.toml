@@ -8,24 +8,6 @@ status = 200
 force = true
 
 [[redirects]]
-from = "/telegram/*"
-to = "/.netlify/functions/telegram"
-status = 200
-force = true
-
-[[redirects]]
-from = "/webhook/*"
-to = "/.netlify/functions/webhook"
-status = 200
-force = true
-
-[[redirects]]
-from = "/login/*"
-to = "/.netlify/functions/login"
-status = 200
-force = true
-
-[[redirects]]
 from = "/mcq-get/*"
 to = "/.netlify/functions/mcq-get"
 status = 200
@@ -38,14 +20,8 @@ status = 200
 force = true
 
 [[redirects]]
-from = "/code2img/*"
-to = "/.netlify/functions/code2img"
-status = 200
-force = true
-
-[[redirects]]
-from = "/data/*"
-to = "/.netlify/functions/data"
+from = "/request/*"
+to = "/.netlify/functions/request"
 status = 200
 force = true
 

@@ -106,7 +106,7 @@ const headers = { key: process.env.api_key || "12345" };
     const text =
         "New timetable generated. Once netlify deploys the site, Please find the updated timetable.";
 
-    fetch(`${baseUrl}/telegram`, {
+    fetch(`${baseUrl}/request/telegram`, {
         body: JSON.stringify({ text }),
         method: "POST",
         headers,

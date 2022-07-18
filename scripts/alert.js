@@ -134,7 +134,7 @@ function main() {
         else throw Error(response);
     } catch (e) {
         console.log(`Error: ${e.message.replace(/<[^>]+>/g, "")}`);
-        fetch(`${baseUrl}/telegram`, {
+        fetch(`${baseUrl}/request/telegram`, {
             body: JSON.stringify({ text: String(e.message) }),
             method: "POST",
             headers,

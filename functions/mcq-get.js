@@ -14,7 +14,7 @@ const validate = require("./utils/validate");
 const configs = require("./files/configs.json");
 const { database } = require("./utils/firebase");
 const timetable = require("./files/timetable.json");
-const { error } = require("./utils/strings");
+const { error } = require("./utils/string");
 const base = require("./utils/base");
 
 exports.handler = async (event, _context) => {

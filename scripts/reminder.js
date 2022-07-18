@@ -73,7 +73,7 @@ console.log(headers);
             let text = `Reminder: Timetable for ${nextDate} [Tomorrow] is:\n\n${schedule}`;
             text += `\n\nMake sure to post your scheduled assignments on time. If already posted make sure to get it approved now.`;
 
-            fetch(`${baseUrl}/telegram`, {
+            fetch(`${baseUrl}/request/telegram`, {
                 body: JSON.stringify({ text, pin: true }),
                 method: "POST",
                 headers,
