@@ -103,7 +103,5 @@
             "name": "Typescript"
         }
     ],
-    "ignore": [
-        "SD"
-    ]
+    "ignore": ["SD", "KR"]
 }
