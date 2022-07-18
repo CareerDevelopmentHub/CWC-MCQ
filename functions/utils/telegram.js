@@ -1,4 +1,4 @@
-const { message } = require("./config");
+const { message } = require("./strings");
 const { set } = require("lodash");
 const telegram_api = require("node-telegram-bot-api");
 
@@ -21,7 +21,7 @@ class telegram {
             "https://google.co.in"
         );
     }
-    
+
     async create_quiz(mention, view_url) {
         const message_obj = await this.bot.sendMessage(
             `-100${this.admin_chat_id}`,

@@ -3,12 +3,17 @@ const fetch = require("node-fetch");
 const { uniq, indexOf } = require("lodash");
 const validate = require("./utils/validate");
 const { database, storage } = require("./utils/firebase");
-const { error, response } = require("./utils/config");
+const { error, response } = require("./utils/strings");
 const telegram = require("./utils/telegram");
 const base = require("./utils/base");
 
+exports.handler = async (event, _context) => {
+    const main = new mcq_post(event);
+    return await main.execute();
+};
+
 class mcq_post extends base {
-    error(message) {
+    #error(message) {
         throw new Error(message);
     }
 
@@ -22,19 +27,19 @@ class mcq_post extends base {
 
         switch (this.path) {
             case "/mcq-post/create":
-                return this.create();
+                return this.#create();
             case "/mcq-post/edit":
-                return this.edit();
+                return this.#edit();
             case "/mcq-post/review":
-                return this.review();
+                return this.#review();
             case "/mcq-post/publish":
-                return this.publish();
+                return this.#publish();
             default:
                 return this.resp_404();
         }
     }
 
-    async code2img(id, language, code) {
+    async #code2img(id, language, code) {
         const url = new URL("https://code2img.vercel.app/api/to-image");
 
         try {
@@ -61,7 +66,7 @@ class mcq_post extends base {
                         contentType: "image/png",
                     },
                 });
-            } else if (!exists) this.error("File not found.");
+            } else if (!exists) this.#error("File not found.");
 
             const [screenshot] = await file.getSignedUrl({
                 action: "read",
@@ -74,13 +79,13 @@ class mcq_post extends base {
         }
     }
 
-    async create() {
+    async #create() {
         const { value: data, error: err } = validate.validateMCQCreate(
             Object.fromEntries(new URLSearchParams(this.body))
         );
 
         try {
-            err && this.error(err);
+            err && this.#error(err);
             const options = [
                 data.option_1_value,
                 data.option_2_value,
@@ -89,20 +94,20 @@ class mcq_post extends base {
             ];
 
             uniq(options).length !== options.length &&
-                this.error(error.OPTION_DUPLICATE);
+                this.#error(error.OPTION_DUPLICATE);
 
             Object.assign(data, { author: this.user.code });
             const question = database.collection("questions").doc();
 
             if (data.code) {
-                const code2img = await this.code2img(
+                const code2img = await this.#code2img(
                     question.id,
                     data.language,
                     data.code
                 );
 
                 if (code2img) data.screenshot = code2img;
-                else this.error(error.SCREENSHOT_FETCH);
+                else this.#error(error.SCREENSHOT_FETCH);
             }
 
             const admin_message_id = await this.telegram.create_quiz(
@@ -119,7 +124,7 @@ class mcq_post extends base {
         }
     }
 
-    async edit() {
+    async #edit() {
         const docId = this.query.id;
         const { value: data, error: err } = validate.validateMCQEdit(
             Object.fromEntries(new URLSearchParams(this.body))
@@ -133,20 +138,20 @@ class mcq_post extends base {
                 data.option_4_value,
             ];
 
-            (err || !docId) && this.error(error.LESS_DATA);
+            (err || !docId) && this.#error(error.LESS_DATA);
             uniq(options).length !== options.length &&
-                this.error(error.OPTION_DUPLICATE);
+                this.#error(error.OPTION_DUPLICATE);
 
             const questionRef = database.collection("questions").doc(docId);
             const question = await questionRef.get();
 
-            !question.exists && this.error(error.QUESTION_NOT_FOUND);
+            !question.exists && this.#error(error.QUESTION_NOT_FOUND);
             const { poll_id, code, approved, author, admin_message_id } =
                 question.data();
 
             (((author !== this.user.code || approved) && !this.user.admin) ||
                 poll_id) &&
-                this.error(error.QUESTION_ALTER);
+                this.#error(error.QUESTION_ALTER);
 
             if (data.code && data.code !== code) {
                 const code2img = await this.code2img(
@@ -156,7 +161,7 @@ class mcq_post extends base {
                 );
 
                 if (code2img) data.screenshot = code2img;
-                else this.error(error.SCREENSHOT_FETCH);
+                else this.#error(error.SCREENSHOT_FETCH);
             }
 
             await questionRef.update(data);
@@ -168,22 +173,22 @@ class mcq_post extends base {
         }
     }
 
-    async review() {
+    async #review() {
         const { value: data, error: err } = validate.validateMCQreview(
             Object.fromEntries(new URLSearchParams(this.body))
         );
 
         try {
-            (!this.user.admin || err) && this.error(error.LESS_DATA);
+            (!this.user.admin || err) && this.#error(error.LESS_DATA);
 
             const { id, action } = data;
             const collection = database.collection("questions");
             const questionRef = collection.doc(id);
             const questionDoc = await questionRef.get();
 
-            !questionDoc.exists && this.error(error.QUESTION_NOT_FOUND);
+            !questionDoc.exists && this.#error(error.QUESTION_NOT_FOUND);
             const { approved, admin_message_id } = questionDoc.data();
-            approved && !this.user.admin && this.error(error.ALREADY_APPROVED);
+            approved && !this.user.admin && this.#error(error.ALREADY_APPROVED);
 
             if (action === "approve") {
                 await this.telegram.review_quiz_approve(
@@ -210,7 +215,7 @@ class mcq_post extends base {
         }
     }
 
-    async publish() {
+    async #publish() {
         const {
             error: err,
             value: { id },
@@ -220,12 +225,12 @@ class mcq_post extends base {
 
         try {
             let _poll_id;
-            err && this.error(err);
+            err && this.#error(err);
             const collection = database.collection("questions");
             const questionRef = collection.doc(id);
             const questionDoc = await questionRef.get();
             const questionUrl = `${this.url}/question/${questionRef.id}`;
-            !questionDoc.exists && this.error(error.QUESTION_NOT_FOUND);
+            !questionDoc.exists && this.#error(error.QUESTION_NOT_FOUND);
 
             const {
                 code,
@@ -242,11 +247,11 @@ class mcq_post extends base {
                 option_4_value,
             } = questionDoc.data();
 
-            !approved && this.error(error.UNAPPROVED);
-            poll_id && this.error(error.ALREADY_PUBLISHED);
+            !approved && this.#error(error.UNAPPROVED);
+            poll_id && this.#error(error.ALREADY_PUBLISHED);
             schedule > moment().utcOffset("+05:30").unix() &&
                 !this.user.admin &&
-                this.error(error.EARLY_POST);
+                this.#error(error.EARLY_POST);
 
             const options = [
                 option_1_value,
@@ -261,7 +266,7 @@ class mcq_post extends base {
             );
 
             if (code) {
-                !screenshot && this.error(error.SCREENSHOT_NOT_FOUND);
+                !screenshot && this.#error(error.SCREENSHOT_NOT_FOUND);
                 _poll_id = await this.telegram.send_quiz_with_code(
                     questionUrl,
                     question,
@@ -286,8 +291,3 @@ class mcq_post extends base {
         }
     }
 }
-
-exports.handler = async (event, _context) => {
-    const main = new mcq_post(event);
-    return await main.execute();
-};

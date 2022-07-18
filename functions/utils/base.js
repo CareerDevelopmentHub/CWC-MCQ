@@ -11,10 +11,10 @@ class base {
             headers: this.headers,
             query: this.query,
             body: this.body,
-        } = this.parseEvent(event));
+        } = this.#parseEvent(event));
     }
 
-    parseEvent(event) {
+    #parseEvent(event) {
         const url = new URL(event.rawUrl);
         const query = Object.fromEntries(new URLSearchParams(event.rawQuery));
 
@@ -41,14 +41,17 @@ class base {
                     });
                 break;
             default:
-                await new Promise((resolve, _reject) =>
-                    auth.verifyIdToken(this.headers.token).then((payload) => {
-                        this.user = find(contributors, {
-                            email: payload.email,
-                        });
-                        this.user.email && (this.auth = true);
-                        resolve();
-                    })
+                await new Promise((resolve, reject) =>
+                    auth
+                        .verifyIdToken(this.headers.token)
+                        .then((payload) => {
+                            this.user = find(contributors, {
+                                email: payload.email,
+                            });
+                            this.user.email && (this.auth = true);
+                            resolve();
+                        })
+                        .catch((error) => reject(error))
                 ).catch((_error) => (this.auth = false));
         }
     }

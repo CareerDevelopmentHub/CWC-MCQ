@@ -12,6 +12,8 @@ const error = {
         "Question is not approved yet. Please ask a admin to approve it first.",
     EARLY_POST:
         "The question has been scheduled for later time, Only admin can post the question before time.",
+    NO_SCHEDULE: "Current timetable doesn't allow posting this topic.",
+    ALREADY_POSTED: "Question with given topic is already posted.",
 };
 
 const message = {
@@ -28,13 +30,13 @@ const message = {
 const response = {
     APPROVE_SUCCESS: "Question approved successfully. Ready to be posted.",
     DECLINE_SUCCESS: "Question successfully deleted from database.",
-    PUBLISH_SUCCESS: "Question successfully published on telegram."
-}
+    PUBLISH_SUCCESS: "Question successfully published on telegram.",
+};
 
-const config = {
+const strings = {
     error,
     message,
     response,
 };
 
-module.exports = config;
+module.exports = strings;

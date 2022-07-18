@@ -7,84 +7,171 @@ const {
     find,
     compact,
     matches,
-    flattenDeep,
     entries,
 } = require("lodash");
-
-const auth = require("./utils/auth");
-const validate = require("./utils/validate");
-const { database } = require("./utils/firebase");
 const moment = require("moment");
-
+const validate = require("./utils/validate");
 const configs = require("./files/configs.json");
+const { database } = require("./utils/firebase");
 const timetable = require("./files/timetable.json");
-const telegram = require("./utils/telegram");
+const { error } = require("./utils/strings");
 const base = require("./utils/base");
-const { API_KEY: api_key } = process.env;
 
-exports.handler = async (event, context) => {
-    const httpMethod = event.httpMethod;
-    const path = last(event.path.split("/"));
-    const rawUrl = new URL(event.rawUrl).origin;
-    const api_authentication = event.headers.key === api_key;
-    const { contributor = {}, OK: authentication } = await auth(
-        event.headers.token,
-        rawUrl
-    );
+exports.handler = async (event, _context) => {
+    const main = new mcq_get(event);
+    return main.execute();
+};
 
-    if (httpMethod !== "GET") {
-        return {
-            statusCode: 401,
-            headers: {
-                "content-type": `application/json`,
-            },
-            body: JSON.stringify({
-                OK: false,
-                error: "Unauthorized",
-            }),
-            isBase64Encoded: false,
-        };
-    } else console.log({ authentication, api_authentication });
+class mcq_get extends base {
+    #error(message) {
+        throw new Error(message);
+    }
 
-    if (path === "schedule") {
-    } else if (path === "list") {
-        const { value: query, error } = validate.validateMCQList(
-            Object.fromEntries(new URLSearchParams(event.rawQuery))
+    async execute() {
+        await this.authenticate();
+
+        switch (this.path) {
+            case "/mcq-get/schedule":
+                return this.#schedule();
+            case "/mcq-get/question":
+                return this.#question();
+            case "/mcq-get/list":
+                return this.#list();
+            default:
+                return this.resp_404();
+        }
+    }
+
+    async #schedule() {
+        const { value: data, error: err } = validate.validateMCQschedule(
+            Object.fromEntries(new URLSearchParams(this.query))
         );
 
-        if (error) {
-            return {
-                statusCode: 400,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({ error, OK: false }),
-                isBase64Encoded: false,
-            };
+        try {
+            let schedule;
+            err && this.#error(err);
+            !this.auth && this.#error("Unauthorized");
+            const collection = database.collection("questions");
+            const results = await collection
+                .where("week", "==", moment().utcOffset("+05:30").week())
+                .where("year", "==", moment().utcOffset("+05:30").year())
+                .orderBy("date", "desc")
+                .get();
+
+            const result = find(results.docs, (r) =>
+                matches({
+                    approved: true,
+                    topic: data.topic,
+                    author: this.user?.code,
+                })(r.data())
+            );
+
+            result && !this.user?.admin && this.#error(error.ALREADY_POSTED);
+            for (const [day, slots] of entries(timetable)) {
+                for (const [slot, { topic, assignee }] of entries(slots)) {
+                    if (
+                        assignee === this.user?.code &&
+                        topic === this.query.topic
+                    ) {
+                        const { startHr } = find(configs.slots, { code: slot });
+                        schedule = moment()
+                            .utcOffset("+05:30")
+                            .hour(startHr)
+                            .minute(0)
+                            .second(0)
+                            .day(day)
+                            .unix();
+                    }
+                }
+            }
+
+            !schedule && !this.user?.admin
+                ? this.#error(error.NO_SCHEDULE)
+                : (schedule = moment().utcOffset("+05:30").second(0).unix());
+
+            return this.resp_200({ schedule });
+        } catch (error) {
+            return this.resp_500({ error: error.message });
         }
+    }
+
+    async #question() {
+        const {
+            error: err,
+            value: { id: docId },
+        } = validate.validateMCQQuestion(
+            Object.fromEntries(new URLSearchParams(this.query))
+        );
 
         try {
-            var questions,
-                questionsRef,
-                filter = {},
-                body = { OK: true, response: [], nextPage: false };
-            const { week, year, lang, topic, author, cursor } = query;
+            err && this.#error(err);
+            const collection = database.collection("questions");
+            const question = await collection.doc(docId).get();
 
-            questionsRef = database
+            (!question.exists || !(question.data().approved || this.auth)) &&
+                this.#error("Question not found");
+
+            const omitParams = [
+                "admin_message_id",
+                "correct_option",
+                "explanation",
+                "screenshot",
+                "approved",
+                "schedule",
+                "poll_id",
+                "week",
+                "year",
+            ];
+
+            const docData = this.auth
+                ? question.data()
+                : omit(question.data(), omitParams);
+
+            docData.canEdit =
+                ((docData.author === this.user?.code && !docData.approved) ||
+                    this.user?.admin) &&
+                !docData.poll_id;
+
+            Object.assign(docData, { docId });
+            return this.resp_200({ response: docData });
+        } catch (error) {
+            return this.resp_500({error: error.message});
+        }
+    }
+
+    async #list() {
+        const { value: data, error: err } = validate.validateMCQList(
+            Object.fromEntries(new URLSearchParams(this.query))
+        );
+
+        try {
+            err && this.#error(err);
+            let questions;
+            let body = { response: [], nextPage: false };
+            const { week, year, cursor } = data;
+
+            let filter = compact(
+                pick(data, [
+                    "week",
+                    "year",
+                    "lang",
+                    "topic",
+                    "author",
+                    "cursor",
+                ])
+            );
+
+            var questionsRef = database
                 .collection("questions")
                 .orderBy("date", "desc");
 
-            if (week && year) {
-                questionsRef = questionsRef
+            week &&
+                year &&
+                (questionsRef = questionsRef
                     .where("week", "==", week)
-                    .where("year", "==", year);
-            }
+                    .where("year", "==", year));
 
-            if (topic) filter.topic = topic;
-            if (lang) filter.language = lang;
-            if (author) filter.author = author;
-            if (!authentication && !api_authentication) filter.approved = true;
-
+            if (!this.auth) filter.approved = true;
             if (!cursor) questions = await questionsRef.get();
             else questions = await questionsRef.startAfter(cursor).get();
 
@@ -94,7 +181,7 @@ exports.handler = async (event, context) => {
                         docId = question.id;
 
                     if (matches(filter)(question.data())) {
-                        if (!authentication && !api_authentication) {
+                        if (!this.auth) {
                             docData = pick(question.data(), [
                                 "docId",
                                 "question",
@@ -117,237 +204,9 @@ exports.handler = async (event, context) => {
                 }
             }
 
-            return {
-                statusCode: 200,
-                body: JSON.stringify(body),
-                headers: {
-                    "content-type": `application/json`,
-                },
-                isBase64Encoded: false,
-            };
+            return this.resp_200(body);
         } catch (error) {
-            return {
-                statusCode: 500,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    error: error.message,
-                    OK: false,
-                }),
-                isBase64Encoded: false,
-            };
-        }
-    } else if (path === "question") {
-        const { value: query, error } = validate.validateMCQQuestion(
-            Object.fromEntries(new URLSearchParams(event.rawQuery))
-        );
-
-        if (error) {
-            return {
-                statusCode: 400,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({ error, OK: false }),
-                isBase64Encoded: false,
-            };
-        }
-
-        try {
-            const docId = query.id;
-            const collection = database.collection("questions");
-            const question = await collection.doc(docId).get();
-
-            if (
-                !question.exists ||
-                !(question.data().approved || authentication)
-            ) {
-                throw Error("Question not found");
-            }
-
-            const docData = authentication
-                ? question.data()
-                : omit(question.data(), [
-                      "admin_message_id",
-                      "correct_option",
-                      "explanation",
-                      "screenshot",
-                      "approved",
-                      "schedule",
-                      "poll_id",
-                      "week",
-                      "year",
-                  ]);
-
-            if (authentication)
-                docData.canEdit =
-                    !docData.poll_id &&
-                    ((docData.author === contributor.code &&
-                        !docData.approved) ||
-                        contributor.admin)
-                        ? true
-                        : false;
-
-            return {
-                statusCode: 200,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    OK: true,
-                    response: { docId, ...docData },
-                    query,
-                }),
-                isBase64Encoded: false,
-            };
-        } catch (error) {
-            return {
-                statusCode: 500,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    error: error.message,
-                    OK: false,
-                }),
-                isBase64Encoded: false,
-            };
-        }
-    }
-};
-
-class mcq_get extends base {
-    error(message) {
-        throw new Error(message);
-    }
-
-    async execute() {
-        await this.authenticate();
-        this.telegram = new telegram();
-
-        if (!this.auth) {
-            return this.resp_404();
-        }
-
-        switch (this.path) {
-            case "/mcq-post/create":
-                return this.create();
-            case "/mcq-post/edit":
-                return this.edit();
-            case "/mcq-post/review":
-                return this.review();
-            case "/mcq-post/publish":
-                return this.publish();
-            default:
-                return this.resp_404();
-        }
-    }
-
-    async schedule() {
-        const { value: query, error: err } = validate.validateMCQschedule(
-            Object.fromEntries(new URLSearchParams(this.query))
-        );
-
-        try {
-            let schedule;
-            err && this.error(err);
-            !this.auth && this.error("Unauthorized");
-            const collection = database.collection("questions");
-            const results = await collection
-                .where("week", "==", moment().utcOffset("+05:30").week())
-                .where("year", "==", moment().utcOffset("+05:30").year())
-                .orderBy("date", "desc")
-                .get();
-
-            const result = find(results.docs, (r) =>
-                matches({
-                    approved: true,
-                    topic: query.topic,
-                    author: this.user.code,
-                })(r.data())
-            );
-
-            result &&
-                !this.user.admin &&
-                this.error(`Question with given topic is already posted.`);
-
-            for (const [day, slots] of entries(timetable)) {
-                for (const [slot, { topic, assignee }] of entries(slots)) {
-                    assignee === this.user.code &&
-                        topic === this.query.topic &&
-                        (() => {
-                            const { startHr } = find(configs, { code: slot });
-                            schedule = moment()
-                            .utcOffset("+05:30")
-                            .day(day)
-                            .hour(s.startHr)
-                            .minute(0)
-                            .second(0)
-                            .unix()
-                        })();
-                }
-            }
-
-            compact(
-                flattenDeep(
-                    Object.keys(timetable).map((day) => {
-                        return Object.keys(timetable[day]).map((slot) => {
-                            const { assignee, topic } = timetable[day][slot];
-
-                            if (
-                                assignee === contributor.code &&
-                                topic === query.topic
-                            ) {
-                                return configs.slots.map((s) => {
-                                    return (
-                                        s.code === slot &&
-                                        moment()
-                                            .utcOffset("+05:30")
-                                            .day(day)
-                                            .hour(s.startHr)
-                                            .minute(0)
-                                            .second(0)
-                                            .unix()
-                                    );
-                                });
-                            } else return undefined;
-                        });
-                    })
-                )
-            );
-
-            if (!schedule && !contributor.admin) {
-                throw Error(
-                    `Current timetable doesn't allow posting this topic from contributor ${contributor.name}.`
-                );
-            }
-
-            return {
-                statusCode: 200,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    OK: true,
-                    schedule:
-                        schedule ||
-                        moment().utcOffset("+05:30").second(0).unix(),
-                }),
-                isBase64Encoded: false,
-            };
-        } catch (error) {
-            return {
-                statusCode: 500,
-                headers: {
-                    "content-type": `application/json`,
-                },
-                body: JSON.stringify({
-                    error: error.message,
-                    OK: false,
-                }),
-                isBase64Encoded: false,
-            };
+            return this.resp_500({ error: error.message });
         }
     }
 }
