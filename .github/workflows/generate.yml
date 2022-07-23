@@ -18,7 +18,7 @@ jobs:
                   cache: 'yarn'
             - name: Generate
               run: |
-                  yarn add moment lodash node-fetch && yarn script:defaulter && yarn script:generate && script:remind
+                  yarn add moment lodash node-fetch && yarn script:defaulter && yarn script:generate && yarn script:remind
                   git add functions/files && git commit -m "auto-gen timetable: $(date)" && git push origin main
               env:
                   api_key: ${{ secrets.API_KEY }}
