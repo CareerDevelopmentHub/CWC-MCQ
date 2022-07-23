@@ -1,24 +1,34 @@
 [
     {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 6,
-        "coverage": [
-            "KL",
-            "NM",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
         "name": "Computer Networking & Security",
         "code": "CNS",
         "slots": 3,
         "coverage": [
-            "MP",
+            "AS",
+            "KL",
+            "NM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 5,
+        "coverage": [
+            "AS",
+            "OM",
+            "KL",
+            "NM",
+            "RG"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 6,
+        "coverage": [
+            "AS",
             "KL",
             "NM",
             "OM",
@@ -28,37 +38,16 @@
         "ignore": []
     },
     {
-        "name": "Apptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "KL",
-            "NM",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 5,
-        "coverage": [
-            "KL",
-            "NM",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Psudo Code",
-        "code": "PC",
+        "name": "Data Science",
+        "code": "DS",
         "slots": 2,
         "coverage": [
-            "MP"
+            "OM",
+            "RG"
         ],
-        "ignore": []
+        "ignore": [
+            "NM"
+        ]
     },
     {
         "name": "Software Development",
@@ -67,16 +56,29 @@
         "ignore": [
             "OM"
         ],
-        "coverage": []
+        "coverage": [
+            "SR",
+            "MP"
+        ]
     },
     {
-        "name": "Data Science",
-        "code": "DS",
+        "name": "Psudo Code",
+        "code": "PC",
         "slots": 2,
-        "coverage": [],
-        "ignore": [
-            "NM"
-        ]
+        "coverage": [
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Apptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "MP"
+        ],
+        "ignore": []
     },
     {
         "name": "Database Management System",
