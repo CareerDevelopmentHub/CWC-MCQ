@@ -61,8 +61,8 @@ const headers = { token: process.env.api_key || "12345", auth_mode: "api" };
         }
     }
 
-    configs.end = moment().utcOffset("+05:30").endOf("week").unix();
-    configs.start = moment().utcOffset("+05:30").startOf("week").unix();
+    configs.end = moment().utcOffset("+05:30").add(1, "week").endOf("week").unix();
+    configs.start = moment().utcOffset("+05:30").add(1, "week").startOf("week").unix();
     const slots = configs.slots.map((slot) => slot.code);
     const days = configs.days.map((day) => day.code);
 
