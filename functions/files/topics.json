@@ -1,12 +1,23 @@
 [
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 2,
         "coverage": [
-            "AS",
             "KL",
             "NM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Apptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -15,25 +26,11 @@
         "code": "DSA",
         "slots": 5,
         "coverage": [
-            "AS",
-            "OM",
+            "SR",
+            "MP",
             "KL",
             "NM",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 6,
-        "coverage": [
-            "AS",
-            "KL",
-            "NM",
-            "OM",
-            "RG",
-            "SR"
+            "AS"
         ],
         "ignore": []
     },
@@ -43,22 +40,12 @@
         "slots": 2,
         "coverage": [
             "OM",
-            "RG"
+            "RG",
+            "AS",
+            "SR"
         ],
         "ignore": [
             "NM"
-        ]
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 4,
-        "ignore": [
-            "OM"
-        ],
-        "coverage": [
-            "SR",
-            "MP"
         ]
     },
     {
@@ -67,24 +54,45 @@
         "slots": 2,
         "coverage": [
             "SR",
-            "MP"
+            "MP",
+            "OM",
+            "RG"
         ],
         "ignore": []
     },
     {
-        "name": "Apptitude",
-        "code": "APPT",
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 6,
+        "coverage": [
+            "MP",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
         "slots": 3,
         "coverage": [
+            "AS",
+            "KL",
+            "NM",
+            "OM",
+            "RG",
             "MP"
         ],
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 2,
-        "coverage": [],
-        "ignore": []
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 4,
+        "ignore": [
+            "OM"
+        ],
+        "coverage": []
     }
 ]
