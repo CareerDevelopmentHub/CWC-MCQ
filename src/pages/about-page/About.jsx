@@ -285,22 +285,19 @@ class About extends React.Component {
 
                                                                         const topic =
                                                                             this.getTopicName(
-                                                                                data[
-                                                                                    "topic"
-                                                                                ]
+                                                                                data?.topic
                                                                             );
 
                                                                         const assignee =
                                                                             this.getContributorName(
-                                                                                data[
-                                                                                    "assignee"
-                                                                                ]
+                                                                                data?.assignee
                                                                             );
 
                                                                         const fulfilled =
-                                                                            data[
-                                                                                "fulfilled"
-                                                                            ];
+                                                                            data?.fulfilled;
+
+                                                                        const ignore =
+                                                                            data?.ignore;
 
                                                                         const color =
                                                                             fulfilled ===
@@ -310,11 +307,6 @@ class About extends React.Component {
                                                                                   false
                                                                                 ? "red"
                                                                                 : "black";
-
-                                                                        const ignore =
-                                                                            data[
-                                                                                "ignore"
-                                                                            ];
 
                                                                         return (
                                                                             <td
