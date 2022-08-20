@@ -1,12 +1,88 @@
 [
     {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
+            "KL",
+            "AS",
+            "NM",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "OM",
+            "RG",
+            "SM",
+            "PP",
+            "PS",
+            "MS",
+            "KL"
+        ],
+        "ignore": []
+    },
+    {
         "name": "Verbal Ability",
         "code": "VA",
         "slots": 3,
         "coverage": [
             "MP",
             "KL",
-            "NM"
+            "NM",
+            "AS",
+            "SR",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "OM",
+            "RG",
+            "SR",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "SR",
+            "MP",
+            "NM",
+            "RG",
+            "SM",
+            "PP",
+            "PS"
         ],
         "ignore": []
     },
@@ -20,53 +96,10 @@
             "NM",
             "AS",
             "OM",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "SR",
-            "MP",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
-            "KL",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "SR",
-            "MP",
-            "NM",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "OM",
             "RG",
-            "SR"
+            "MP",
+            "PP",
+            "PS"
         ],
         "ignore": []
     },
@@ -75,16 +108,9 @@
         "code": "DBMS",
         "slots": 3,
         "coverage": [
-            "OM",
+            "MS",
             "MP"
         ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [],
         "ignore": []
     }
 ]
