@@ -1,38 +1,15 @@
 [
     {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "NM",
-            "AS",
-            "SR",
-            "MP",
-            "KL",
-            "OM",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
+        "name": "Computer Networking & Security",
+        "code": "CNS",
         "slots": 3,
         "coverage": [
+            "PP",
+            "PS",
+            "SM",
             "KL",
             "NM",
             "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "OM",
-            "MS",
-            "KL"
         ],
         "ignore": []
     },
@@ -41,30 +18,9 @@
         "code": "SD",
         "slots": 3,
         "coverage": [
-            "MS",
-            "MP",
-            "SM",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "NM",
-            "AS",
-            "RG",
-            "SR",
-            "MP",
-            "SM",
-            "PP"
+            "PP",
+            "PS",
+            "KL"
         ],
         "ignore": []
     },
@@ -75,18 +31,10 @@
         "coverage": [
             "SM",
             "PP",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "PP",
-            "PS",
-            "SM"
+            "MP",
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -96,7 +44,67 @@
         "slots": 4,
         "coverage": [
             "PS",
-            "MS"
+            "MS",
+            "NM",
+            "AS",
+            "OM",
+            "RG"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "SM",
+            "PP",
+            "PS",
+            "MS",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "OM",
+            "MS",
+            "KL",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "PS",
+            "MS",
+            "MP",
+            "SM",
+            "PP"
         ],
         "ignore": []
     }
