@@ -1,19 +1,32 @@
 [
     {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
+            "PP",
+            "AS",
+            "OM",
+            "RG",
+            "KL",
+            "NM",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
         "name": "Data Structure and Algorithms",
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "PP",
-            "PS",
-            "MS",
+            "SM",
             "KL",
             "NM",
             "AS",
             "OM",
             "RG",
-            "SR",
-            "MP"
+            "SR"
         ],
         "ignore": []
     },
@@ -24,22 +37,10 @@
         "coverage": [
             "PS",
             "MS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
             "KL",
             "NM",
-            "AS"
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
@@ -48,15 +49,9 @@
         "code": "SD",
         "slots": 3,
         "coverage": [
-            "PP",
-            "PS",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
+            "SM",
+            "MS",
+            "KL"
         ],
         "ignore": []
     },
@@ -67,16 +62,7 @@
         "coverage": [
             "PS",
             "MS",
-            "NM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
-            "PP",
+            "NM",
             "AS",
             "OM",
             "RG"
@@ -84,13 +70,17 @@
         "ignore": []
     },
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
+            "RG",
+            "SR",
+            "MP",
+            "SM",
             "PP",
-            "OM",
-            "SR"
+            "PS",
+            "MS"
         ],
         "ignore": []
     },
@@ -100,7 +90,21 @@
         "slots": 3,
         "coverage": [
             "SM",
-            "MP"
+            "MP",
+            "PP",
+            "PS",
+            "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "PS",
+            "PP"
         ],
         "ignore": []
     }
