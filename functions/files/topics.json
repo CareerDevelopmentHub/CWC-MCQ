@@ -1,16 +1,12 @@
 [
     {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
         "coverage": [
-            "SR",
             "MP",
-            "SM",
             "PP",
-            "KL",
-            "NM",
-            "AS"
+            "KL"
         ],
         "ignore": []
     },
@@ -19,15 +15,36 @@
         "code": "CNS",
         "slots": 3,
         "coverage": [
+            "PS",
+            "MS",
+            "KL"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "SM",
+            "MS",
+            "MP",
             "KL",
             "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "MS",
+            "PS",
+            "NM",
             "AS",
-            "SR",
-            "MP",
-            "SM",
-            "OM",
-            "RG",
-            "PP"
+            "OM"
         ],
         "ignore": []
     },
@@ -42,7 +59,11 @@
             "KL",
             "NM",
             "AS",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "MP",
+            "PS"
         ],
         "ignore": []
     },
@@ -53,23 +74,24 @@
         "coverage": [
             "NM",
             "AS",
-            "KL"
+            "KL",
+            "OM",
+            "RG",
+            "SR"
         ],
         "ignore": []
     },
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
-            "MS",
-            "SM",
-            "PS",
-            "KL",
-            "NM",
-            "AS",
             "OM",
             "RG",
+            "PS",
+            "MS",
+            "NM",
+            "AS",
             "SR"
         ],
         "ignore": []
@@ -79,34 +101,10 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
+            "MP",
             "SM",
             "PP",
-            "PS",
-            "MS",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "MS",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "MS",
-            "PS"
+            "MS"
         ],
         "ignore": []
     }
