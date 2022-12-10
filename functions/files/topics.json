@@ -1,18 +1,53 @@
 [
     {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "PS",
+            "KL"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "RG",
+            "SR",
+            "PS",
+            "MS",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
         "name": "Verbal Ability",
         "code": "VA",
         "slots": 3,
         "coverage": [
-            "NM",
-            "AS",
-            "KL",
-            "OM",
-            "RG",
-            "SR",
-            "MP",
-            "SM",
-            "PP"
+            "PS",
+            "MS",
+            "NM"
         ],
         "ignore": []
     },
@@ -24,53 +59,11 @@
             "KL",
             "NM",
             "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "KL",
-            "MP",
-            "SM",
-            "PP",
-            "NM",
-            "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "MS",
-            "MP",
-            "KL",
-            "NM",
-            "AS",
             "OM",
             "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
+            "SR",
             "MP",
-            "PP",
-            "KL",
-            "NM",
-            "AS",
-            "RG"
+            "SM"
         ],
         "ignore": []
     },
@@ -86,20 +79,26 @@
             "OM",
             "KL",
             "RG",
-            "SR"
+            "SR",
+            "MP",
+            "SM",
+            "PP"
         ],
         "ignore": []
     },
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
         "coverage": [
-            "SR",
-            "PS",
             "MP",
-            "SM",
             "PP",
+            "KL",
+            "NM",
+            "AS",
+            "RG",
+            "OM",
+            "SM",
             "MS"
         ],
         "ignore": []
@@ -110,7 +109,10 @@
         "slots": 3,
         "coverage": [
             "PS",
-            "MS"
+            "MS",
+            "AS",
+            "OM",
+            "PP"
         ],
         "ignore": []
     }
