@@ -1,5 +1,37 @@
 [
     {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "MS",
+            "MP",
+            "SM",
+            "OM",
+            "RG",
+            "SR",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
         "name": "Computer Networking & Security",
         "code": "CNS",
         "slots": 3,
@@ -9,7 +41,10 @@
             "PP",
             "KL",
             "NM",
-            "AS"
+            "AS",
+            "OM",
+            "RG",
+            "SR"
         ],
         "ignore": []
     },
@@ -21,6 +56,21 @@
             "RG",
             "SR",
             "MP",
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
             "KL"
         ],
         "ignore": []
@@ -30,13 +80,13 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
+            "RG",
+            "SR",
+            "MP",
             "SM",
             "PP",
             "PS",
-            "MS",
-            "KL",
-            "NM",
-            "AS"
+            "MS"
         ],
         "ignore": []
     },
@@ -48,20 +98,6 @@
             "RG",
             "KL",
             "SR",
-            "NM",
-            "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "RG",
-            "SR",
-            "KL",
             "NM",
             "AS",
             "OM",
@@ -76,38 +112,9 @@
         "code": "SD",
         "slots": 3,
         "coverage": [
-            "PP",
-            "PS",
-            "OM",
-            "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
             "MS",
-            "MP",
-            "SM",
-            "OM",
-            "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "MP",
-            "SM",
             "PP",
-            "PS",
-            "MS"
+            "PS"
         ],
         "ignore": []
     }
