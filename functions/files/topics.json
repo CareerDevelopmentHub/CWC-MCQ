@@ -1,33 +1,12 @@
 [
     {
-        "name": "Aptitude",
-        "code": "APPT",
+        "name": "Database Management System",
+        "code": "DBMS",
         "slots": 3,
         "coverage": [
+            "PS",
             "MS",
-            "MP",
-            "SM",
-            "OM",
-            "RG",
-            "SR",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
+            "KL"
         ],
         "ignore": []
     },
@@ -36,15 +15,9 @@
         "code": "CNS",
         "slots": 3,
         "coverage": [
-            "MP",
-            "SM",
-            "PP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR"
+            "PS",
+            "MS",
+            "KL"
         ],
         "ignore": []
     },
@@ -53,14 +26,10 @@
         "code": "OOP",
         "slots": 4,
         "coverage": [
-            "RG",
-            "SR",
-            "MP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "SM"
+            "PP",
+            "PS",
+            "MS",
+            "KL"
         ],
         "ignore": []
     },
@@ -71,7 +40,10 @@
         "coverage": [
             "PS",
             "MS",
-            "KL"
+            "KL",
+            "NM",
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
@@ -80,30 +52,13 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "RG",
-            "SR",
-            "MP",
-            "SM",
-            "PP",
-            "PS",
-            "MS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "RG",
-            "KL",
-            "SR",
             "NM",
             "AS",
             "OM",
+            "RG",
+            "SR",
             "MP",
-            "SM",
-            "PP"
+            "SM"
         ],
         "ignore": []
     },
@@ -114,7 +69,34 @@
         "coverage": [
             "MS",
             "PP",
-            "PS"
+            "PS",
+            "NM",
+            "AS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "SM",
+            "PP",
+            "RG",
+            "SR",
+            "MP"
         ],
         "ignore": []
     }
