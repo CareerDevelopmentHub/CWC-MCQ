@@ -4,32 +4,9 @@
         "code": "DBMS",
         "slots": 3,
         "coverage": [
-            "MP",
-            "SM",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "PP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "RG",
-            "PP",
+            "PS",
             "MS",
-            "KL",
-            "OM",
-            "SR",
-            "NM",
-            "AS",
-            "MP"
+            "KL"
         ],
         "ignore": []
     },
@@ -38,15 +15,38 @@
         "code": "APPT",
         "slots": 3,
         "coverage": [
-            "PS",
-            "MS",
+            "SM",
+            "PP",
+            "KL"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "RG",
+            "SR",
             "KL",
             "NM",
             "AS",
-            "OM",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "KL",
+            "NM",
+            "AS",
             "RG",
             "SR",
-            "MP"
+            "MP",
+            "OM"
         ],
         "ignore": []
     },
@@ -58,46 +58,11 @@
             "KL",
             "NM",
             "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
+            "OM",
             "RG",
             "SR",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "NM",
-            "AS",
-            "OM",
-            "MS",
-            "KL",
             "MP",
             "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "OM",
-            "SM",
-            "PP",
-            "PS",
-            "MS"
         ],
         "ignore": []
     },
@@ -108,7 +73,34 @@
         "coverage": [
             "SM",
             "PP",
-            "PS"
+            "PS",
+            "NM",
+            "AS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "SM",
+            "PS",
+            "RG"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "SR",
+            "PP",
+            "PS",
+            "MP",
+            "MS"
         ],
         "ignore": []
     }
