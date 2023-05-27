@@ -1,40 +1,13 @@
 [
     {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "PP",
-            "SM",
-            "PS",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
         "name": "Coding Questions",
         "code": "CQ",
         "slots": 7,
         "coverage": [
-            "KL",
-            "PP",
-            "PS",
-            "MS",
-            "NM",
-            "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "PP",
-            "MS",
+            "RG",
+            "SR",
+            "MP",
+            "SM",
             "KL",
             "NM",
             "AS"
@@ -46,15 +19,9 @@
         "code": "APPT",
         "slots": 3,
         "coverage": [
-            "RG",
-            "SR",
-            "OM",
-            "KL",
-            "NM",
-            "AS",
-            "MP",
-            "SM",
-            "PP"
+            "PS",
+            "MS",
+            "KL"
         ],
         "ignore": []
     },
@@ -63,40 +30,10 @@
         "code": "OOP",
         "slots": 4,
         "coverage": [
-            "MP",
-            "PS",
-            "MS",
-            "KL",
-            "OM",
-            "RG",
-            "SR",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "MS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "SM",
+            "NM",
+            "AS",
             "PP",
-            "PS",
-            "MS",
-            "RG",
-            "SR",
-            "MP"
+            "KL"
         ],
         "ignore": []
     },
@@ -107,7 +44,66 @@
         "coverage": [
             "RG",
             "SR",
-            "PS"
+            "PS",
+            "NM",
+            "AS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "SM",
+            "PS",
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "MS",
+            "OM",
+            "RG",
+            "SR",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "OM",
+            "MP",
+            "SM",
+            "PP",
+            "PS",
+            "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "PS",
+            "PP"
         ],
         "ignore": []
     }
