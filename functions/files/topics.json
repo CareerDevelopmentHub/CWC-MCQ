@@ -1,11 +1,11 @@
 [
     {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "PP",
             "PS",
+            "MS",
             "KL",
             "NM",
             "AS",
@@ -18,10 +18,10 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
+            "OM",
+            "RG",
+            "SR",
+            "MP",
             "KL",
             "NM",
             "AS"
@@ -29,10 +29,40 @@
         "ignore": []
     },
     {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
         "coverage": [
+            "MP",
+            "PP",
+            "SM",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "KL",
+            "RG",
+            "SR",
+            "OM",
+            "MP",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "PS",
             "KL",
             "NM",
             "AS",
@@ -53,16 +83,22 @@
             "NM",
             "OM",
             "RG",
-            "SR"
+            "SR",
+            "SM",
+            "PP",
+            "PS"
         ],
         "ignore": []
     },
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
-            "KL",
+            "SM",
+            "PP",
+            "PS",
+            "MS",
             "RG",
             "SR"
         ],
@@ -73,32 +109,8 @@
         "code": "SD",
         "slots": 3,
         "coverage": [
-            "MS",
-            "RG",
-            "SR",
-            "MP",
-            "SM",
-            "PP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "PP",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
             "PS",
+            "PP",
             "MS"
         ],
         "ignore": []
