@@ -9,7 +9,22 @@
             "KL",
             "NM",
             "AS",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "MP",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "MS",
+            "KL"
         ],
         "ignore": []
     },
@@ -18,10 +33,24 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "OM",
-            "RG",
-            "SR",
-            "MP",
+            "SM",
+            "PP",
+            "PS",
+            "MS",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "PP",
+            "MS",
             "KL",
             "NM",
             "AS"
@@ -38,20 +67,24 @@
             "SM",
             "KL",
             "NM",
-            "AS"
+            "AS",
+            "OM",
+            "RG",
+            "SR"
         ],
         "ignore": []
     },
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
-            "KL",
-            "RG",
-            "SR",
+            "NM",
+            "AS",
             "OM",
             "MP",
+            "RG",
+            "SR",
             "SM"
         ],
         "ignore": []
@@ -61,57 +94,19 @@
         "code": "DBMS",
         "slots": 3,
         "coverage": [
-            "PP",
-            "PS",
-            "KL",
-            "NM",
-            "AS",
+            "MS",
             "OM",
-            "RG",
-            "SR",
-            "MP"
+            "PP"
         ],
         "ignore": []
     },
     {
-        "name": "Verbal Ability",
-        "code": "VA",
+        "name": "Aptitude",
+        "code": "APPT",
         "slots": 3,
         "coverage": [
-            "KL",
-            "AS",
-            "NM",
-            "OM",
-            "RG",
-            "SR",
-            "SM",
             "PP",
             "PS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
-            "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "PP",
-            "MS"
         ],
         "ignore": []
     }
