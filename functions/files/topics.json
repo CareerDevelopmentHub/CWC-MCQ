@@ -4,16 +4,10 @@
         "code": "OOP",
         "slots": 4,
         "coverage": [
-            "PS",
-            "MS",
+            "PP",
             "KL",
             "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP",
-            "SM"
+            "AS"
         ],
         "ignore": []
     },
@@ -24,22 +18,35 @@
         "coverage": [
             "MP",
             "MS",
-            "KL"
+            "KL",
+            "NM",
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
             "MS",
+            "OM",
+            "PP",
             "KL",
             "NM",
             "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
+            "KL"
         ],
         "ignore": []
     },
@@ -53,20 +60,6 @@
             "MS",
             "KL",
             "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "PP",
-            "SM",
-            "KL",
-            "NM",
             "AS",
             "OM",
             "RG",
@@ -75,28 +68,32 @@
         "ignore": []
     },
     {
-        "name": "Coding Questions",
-        "code": "CQ",
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
         "slots": 7,
         "coverage": [
-            "NM",
-            "AS",
             "OM",
-            "MP",
             "RG",
             "SR",
-            "SM"
+            "MP",
+            "SM",
+            "PP",
+            "PS"
         ],
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
+            "PP",
+            "PS",
             "MS",
-            "OM",
-            "PP"
+            "RG",
+            "SR",
+            "MP",
+            "SM"
         ],
         "ignore": []
     },
@@ -106,7 +103,10 @@
         "slots": 3,
         "coverage": [
             "PP",
-            "PS"
+            "PS",
+            "MP",
+            "SM",
+            "MS"
         ],
         "ignore": []
     }
