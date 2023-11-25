@@ -1,58 +1,17 @@
 [
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
+        "name": "Verbal Ability",
+        "code": "VA",
         "slots": 3,
         "coverage": [
             "PS",
             "MS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "PS",
-            "KL",
-            "OM",
             "MP",
+            "SM",
             "PP",
-            "NM",
-            "AS",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
             "KL",
             "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
+            "AS"
         ],
         "ignore": []
     },
@@ -64,7 +23,26 @@
             "PP",
             "PS",
             "MS",
-            "OM"
+            "OM",
+            "KL",
+            "NM",
+            "AS",
+            "RG"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "SM",
+            "PP",
+            "PS",
+            "MS",
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -73,12 +51,9 @@
         "code": "CNS",
         "slots": 3,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "OM",
-            "RG",
-            "SR"
+            "MP",
+            "MS",
+            "OM"
         ],
         "ignore": []
     },
@@ -87,25 +62,49 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
+            "OM",
+            "RG",
+            "SR",
             "MP",
             "SM",
             "PP",
-            "PS",
-            "SR",
-            "MS"
+            "PS"
         ],
         "ignore": []
     },
     {
-        "name": "Verbal Ability",
-        "code": "VA",
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "SR",
+            "MS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
         "slots": 3,
         "coverage": [
             "PS",
             "MS",
-            "MP",
+            "KL",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
             "SM",
-            "PP"
+            "PP",
+            "PS"
         ],
         "ignore": []
     }
