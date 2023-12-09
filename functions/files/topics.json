@@ -1,12 +1,38 @@
 [
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
+        "name": "Verbal Ability",
+        "code": "VA",
         "slots": 3,
         "coverage": [
-            "MP",
+            "RG",
+            "SM",
+            "PP",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "SM",
+            "PP",
+            "KL"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "SM",
+            "PP",
+            "PS",
             "MS",
-            "OM",
             "KL",
             "NM",
             "AS"
@@ -21,39 +47,11 @@
             "SR",
             "MP",
             "SM",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
             "KL",
-            "RG",
-            "SR",
-            "MP",
             "NM",
             "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
             "OM",
-            "RG",
-            "SR",
-            "MP",
-            "KL",
-            "NM",
-            "AS"
+            "RG"
         ],
         "ignore": []
     },
@@ -62,22 +60,11 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "MS",
+            "PS",
             "OM",
             "RG",
             "SR",
             "MP",
-            "SM",
-            "PP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "RG",
             "SM",
             "PP"
         ],
@@ -90,7 +77,10 @@
         "coverage": [
             "PP",
             "PS",
-            "MS"
+            "MS",
+            "OM",
+            "RG",
+            "SR"
         ],
         "ignore": []
     },
@@ -99,8 +89,19 @@
         "code": "APPT",
         "slots": 3,
         "coverage": [
-            "MS",
+            "SR",
+            "MP",
             "PS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "MS"
         ],
         "ignore": []
     }
