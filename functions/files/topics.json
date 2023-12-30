@@ -6,22 +6,23 @@
         "coverage": [
             "PS",
             "MS",
-            "KL"
+            "KL",
+            "NM",
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
         "coverage": [
+            "SM",
+            "PP",
             "KL",
             "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
+            "AS"
         ],
         "ignore": []
     },
@@ -30,14 +31,10 @@
         "code": "OOP",
         "slots": 4,
         "coverage": [
-            "PP",
-            "PS",
-            "MS",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG"
+            "SR",
+            "MP",
+            "SM",
+            "KL"
         ],
         "ignore": []
     },
@@ -46,10 +43,10 @@
         "code": "CQ",
         "slots": 7,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
+            "OM",
+            "RG",
+            "SR",
+            "MP",
             "KL",
             "NM",
             "AS"
@@ -61,29 +58,9 @@
         "code": "APPT",
         "slots": 3,
         "coverage": [
-            "SM",
-            "MS",
-            "PS",
-            "OM",
-            "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "PP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "SR",
             "MP",
-            "PS"
+            "PP",
+            "OM"
         ],
         "ignore": []
     },
@@ -94,17 +71,33 @@
         "coverage": [
             "MP",
             "MS",
+            "SM",
+            "RG",
+            "SR",
+            "PP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "RG",
+            "MS",
             "SM"
         ],
         "ignore": []
     },
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
         "coverage": [
             "SM",
-            "PP"
+            "PP",
+            "PS",
+            "MS"
         ],
         "ignore": []
     }
