@@ -1,25 +1,49 @@
 [
     {
-        "name": "Verbal Ability",
-        "code": "VA",
+        "name": "Database Management System",
+        "code": "DBMS",
         "slots": 3,
         "coverage": [
+            "MP",
+            "MS",
+            "SM",
+            "RG",
+            "SR",
+            "PP",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "SM",
+            "PP",
             "PS",
             "MS",
             "KL",
             "NM",
             "AS",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "MP"
         ],
         "ignore": []
     },
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
             "SM",
             "PP",
+            "PS",
+            "MS",
             "KL",
             "NM",
             "AS"
@@ -34,22 +58,11 @@
             "SR",
             "MP",
             "SM",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
+            "KL",
             "OM",
             "RG",
-            "SR",
-            "MP",
-            "KL",
-            "NM",
-            "AS"
+            "PP",
+            "PS"
         ],
         "ignore": []
     },
@@ -60,21 +73,27 @@
         "coverage": [
             "MP",
             "PP",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "SM"
         ],
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
+        "name": "Verbal Ability",
+        "code": "VA",
         "slots": 3,
         "coverage": [
-            "MP",
+            "PS",
             "MS",
-            "SM",
-            "RG",
+            "KL",
+            "NM",
+            "AS",
+            "OM",
             "SR",
-            "PP"
+            "MP",
+            "SM"
         ],
         "ignore": []
     },
@@ -85,17 +104,18 @@
         "coverage": [
             "RG",
             "MS",
-            "SM"
+            "SM",
+            "OM",
+            "MP",
+            "PP"
         ],
         "ignore": []
     },
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
         "coverage": [
-            "SM",
-            "PP",
             "PS",
             "MS"
         ],
