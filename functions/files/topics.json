@@ -1,18 +1,29 @@
 [
     {
-        "name": "Database Management System",
-        "code": "DBMS",
+        "name": "Software Development",
+        "code": "SD",
         "slots": 3,
         "coverage": [
-            "MP",
+            "RG",
             "MS",
             "SM",
-            "RG",
-            "SR",
+            "OM",
+            "MP",
             "PP",
             "KL",
             "NM",
             "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "OM",
+            "PS",
+            "KL"
         ],
         "ignore": []
     },
@@ -21,10 +32,6 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
             "KL",
             "NM",
             "AS",
@@ -32,37 +39,6 @@
             "RG",
             "SR",
             "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
-            "SR",
-            "MP",
-            "SM",
-            "KL",
-            "OM",
-            "RG",
-            "PP",
-            "PS"
         ],
         "ignore": []
     },
@@ -76,38 +52,25 @@
             "OM",
             "RG",
             "SR",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
-            "KL",
+            "SM",
             "NM",
             "AS",
-            "OM",
-            "SR",
-            "MP",
-            "SM"
+            "PS"
         ],
         "ignore": []
     },
     {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
-            "RG",
-            "MS",
-            "SM",
             "OM",
+            "RG",
+            "SR",
             "MP",
-            "PP"
+            "SM",
+            "PP",
+            "PS"
         ],
         "ignore": []
     },
@@ -117,7 +80,32 @@
         "slots": 3,
         "coverage": [
             "PS",
+            "MS",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "SM",
             "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
+            "MS",
+            "SM",
+            "PP"
         ],
         "ignore": []
     }
