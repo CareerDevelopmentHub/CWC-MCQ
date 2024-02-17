@@ -1,68 +1,12 @@
 [
     {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
         "coverage": [
-            "RG",
-            "PP",
-            "MS",
-            "KL",
-            "NM",
-            "AS",
             "OM",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "PS",
             "SM",
-            "PP",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "MS",
             "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "PP",
-            "PS",
-            "OM"
         ],
         "ignore": []
     },
@@ -76,24 +20,24 @@
             "MS",
             "OM",
             "RG",
-            "SR"
+            "SR",
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
+        "name": "Aptitude",
+        "code": "APPT",
         "slots": 3,
         "coverage": [
             "PP",
             "PS",
-            "MS",
+            "OM",
             "KL",
             "NM",
-            "AS",
-            "RG",
-            "SR",
-            "MP"
+            "AS"
         ],
         "ignore": []
     },
@@ -102,11 +46,69 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
+            "NM",
+            "AS",
+            "OM",
+            "SR",
             "RG",
-            "SM",
             "MP",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "SM",
+            "PP",
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "RG",
+            "SR",
+            "MP",
+            "SM",
             "PP",
             "PS",
+            "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "SM",
+            "MS",
+            "KL",
+            "MP",
+            "PP",
+            "PS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
+            "PS",
+            "PP",
             "MS"
         ],
         "ignore": []
