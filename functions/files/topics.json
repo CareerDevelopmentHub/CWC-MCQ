@@ -1,5 +1,20 @@
 [
     {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
         "name": "Verbal Ability",
         "code": "VA",
         "slots": 3,
@@ -9,7 +24,10 @@
             "SR",
             "KL",
             "NM",
-            "AS"
+            "AS",
+            "OM",
+            "MP",
+            "PP"
         ],
         "ignore": []
     },
@@ -18,15 +36,9 @@
         "code": "APPT",
         "slots": 3,
         "coverage": [
-            "PP",
-            "SM",
-            "MS",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR"
+            "MP",
+            "PS",
+            "KL"
         ],
         "ignore": []
     },
@@ -40,24 +52,10 @@
             "OM",
             "KL",
             "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "KL",
-            "NM",
             "AS",
-            "OM",
             "RG",
-            "SR"
+            "SM",
+            "PS"
         ],
         "ignore": []
     },
@@ -66,40 +64,13 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "KL",
-            "NM",
-            "AS",
-            "MS",
-            "OM",
-            "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "MP",
             "SM",
             "PP",
             "PS",
-            "MS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
-            "OM",
-            "MP",
-            "SM",
-            "PP"
+            "KL",
+            "NM",
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
@@ -111,7 +82,31 @@
             "SM",
             "PP",
             "PS",
-            "MP"
+            "MP",
+            "NM",
+            "AS",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "SR",
+            "SM",
+            "PP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "MS"
         ],
         "ignore": []
     }
