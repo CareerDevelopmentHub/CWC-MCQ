@@ -1,40 +1,13 @@
 [
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
         "coverage": [
+            "MS",
+            "OM",
             "RG",
             "SR",
-            "MP",
-            "MS",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
-            "KL",
-            "OM",
-            "MS",
-            "NM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
             "KL",
             "NM",
             "AS"
@@ -48,33 +21,41 @@
         "coverage": [
             "MP",
             "AS",
-            "OM"
+            "OM",
+            "KL",
+            "NM",
+            "RG"
         ],
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
+            "KL",
+            "OM",
             "MS",
+            "NM",
+            "AS",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
             "OM",
             "RG",
-            "SR"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
             "SR",
-            "SM",
-            "PP",
-            "RG",
             "MP",
-            "PS"
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -85,7 +66,24 @@
         "coverage": [
             "PS",
             "SR",
-            "SM"
+            "SM",
+            "OM",
+            "MP",
+            "PP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "OM",
+            "SM",
+            "PP",
+            "PS",
+            "SR",
+            "MS"
         ],
         "ignore": []
     },
@@ -94,6 +92,18 @@
         "code": "APPT",
         "slots": 3,
         "coverage": [
+            "PS",
+            "MS",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "MS",
             "SM",
             "PP"
         ],
