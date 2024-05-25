@@ -1,58 +1,13 @@
 [
     {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "MS",
-            "OM",
-            "RG",
-            "SR",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "AS",
-            "OM",
-            "KL",
-            "NM",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
-            "KL",
-            "OM",
-            "MS",
-            "NM",
-            "AS",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
         "name": "Coding Questions",
         "code": "CQ",
         "slots": 7,
         "coverage": [
-            "OM",
-            "RG",
-            "SR",
-            "MP",
+            "SM",
+            "PP",
+            "PS",
+            "MS",
             "KL",
             "NM",
             "AS"
@@ -69,32 +24,39 @@
             "SM",
             "OM",
             "MP",
+            "PP",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "AS",
+            "OM",
+            "KL",
+            "NM",
+            "RG",
+            "SR",
+            "SM",
             "PP"
         ],
         "ignore": []
     },
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "OM",
             "SM",
             "PP",
             "PS",
-            "SR",
-            "MS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
-            "SM"
+            "KL"
         ],
         "ignore": []
     },
@@ -105,7 +67,47 @@
         "coverage": [
             "MS",
             "SM",
-            "PP"
+            "PP",
+            "NM",
+            "AS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "PS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
+            "SM",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "RG",
+            "MP",
+            "SR",
+            "MS"
         ],
         "ignore": []
     }
