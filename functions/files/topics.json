@@ -1,62 +1,20 @@
 [
     {
-        "name": "Coding Questions",
-        "code": "CQ",
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
         "slots": 7,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
+            "RG",
+            "MP",
+            "SR",
             "MS",
             "KL",
             "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "SR",
-            "SM",
-            "OM",
-            "MP",
-            "PP",
-            "KL",
-            "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "MP",
             "AS",
             "OM",
-            "KL",
-            "NM",
-            "RG",
-            "SR",
-            "SM",
-            "PP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
             "SM",
             "PP",
-            "PS",
-            "KL"
+            "PS"
         ],
         "ignore": []
     },
@@ -70,18 +28,26 @@
             "PP",
             "NM",
             "AS",
-            "OM"
+            "OM",
+            "KL",
+            "RG",
+            "SR"
         ],
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "MP",
+            "SM",
+            "PP",
             "PS",
-            "OM"
+            "KL",
+            "NM",
+            "AS",
+            "OM",
+            "RG"
         ],
         "ignore": []
     },
@@ -95,19 +61,59 @@
             "SM",
             "OM",
             "RG",
+            "SR",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "MP",
+            "PS",
+            "OM",
+            "RG",
+            "SR",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "MS",
+            "OM",
             "SR"
         ],
         "ignore": []
     },
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
+        "name": "Coding Questions",
+        "code": "CQ",
         "slots": 7,
         "coverage": [
-            "RG",
             "MP",
-            "SR",
+            "SM",
+            "PP",
+            "PS",
             "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
+            "MP"
         ],
         "ignore": []
     }
