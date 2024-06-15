@@ -7,178 +7,179 @@
         "S2": {
             "topic": "DSA",
             "ignore": false,
-            "assignee": "SM"
+            "assignee": "MS"
         },
         "S3": {
-            "topic": "CNS",
+            "topic": "OOP",
             "ignore": false,
-            "assignee": "PS"
+            "assignee": "PP"
         },
         "S4": {
-            "topic": "CQ",
+            "topic": "SD",
             "ignore": false,
             "assignee": "AS"
         },
         "S5": {
-            "topic": "DBMS",
+            "topic": "CQ",
             "ignore": false,
-            "assignee": "KL"
+            "assignee": "AS"
         }
     },
     "1": {
         "S1": {
+            "topic": "VA",
+            "ignore": false,
+            "assignee": "SR"
+        },
+        "S2": {
+            "topic": "DSA",
+            "ignore": false,
+            "assignee": "PS"
+        },
+        "S3": {
+            "topic": "OOP",
+            "ignore": false,
+            "assignee": "SM"
+        },
+        "S4": {
             "topic": "SD",
+            "ignore": false,
+            "assignee": "NM"
+        },
+        "S5": {
+            "topic": "CQ",
+            "ignore": false,
+            "assignee": "NM"
+        }
+    },
+    "2": {
+        "S1": {
+            "topic": "VA",
             "ignore": false,
             "assignee": "PS"
         },
         "S2": {
             "topic": "DSA",
             "ignore": false,
-            "assignee": "SR"
+            "assignee": "SM"
         },
         "S3": {
-            "topic": "CNS",
-            "ignore": false,
-            "assignee": "MP"
-        },
-        "S4": {
-            "topic": "CQ",
-            "ignore": false,
-            "assignee": "NM"
-        },
-        "S5": {
             "topic": "OOP",
-            "ignore": false,
-            "assignee": "KL"
-        }
-    },
-    "2": {
-        "S1": {
-            "topic": "SD",
-            "ignore": false,
-            "assignee": "PP"
-        },
-        "S2": {
-            "topic": "DSA",
             "ignore": false,
             "assignee": "RG"
         },
-        "S3": {
-            "topic": "CQ",
-            "ignore": false,
-            "assignee": "SM"
-        },
         "S4": {
-            "topic": "VA",
+            "topic": "SD",
             "ignore": false,
-            "assignee": "AS"
+            "assignee": "KL"
         },
         "S5": {
-            "topic": "OOP",
+            "topic": "CQ",
             "ignore": false,
             "assignee": "MS"
         }
     },
     "3": {
         "S1": {
-            "topic": "SD",
-            "ignore": false,
-            "assignee": "SM"
-        },
-        "S2": {
-            "topic": "APPT",
-            "ignore": false,
-            "assignee": "RG"
-        },
-        "S3": {
-            "topic": "CQ",
-            "ignore": false,
-            "assignee": "MP"
-        },
-        "S4": {
             "topic": "VA",
             "ignore": false,
-            "assignee": "NM"
-        },
-        "S5": {
-            "topic": "OOP",
-            "ignore": false,
             "assignee": "MP"
-        }
-    },
-    "4": {
-        "S1": {
-            "topic": "DSA",
-            "ignore": false,
-            "assignee": "MS"
         },
         "S2": {
-            "topic": "APPT",
-            "ignore": false,
-            "assignee": "OM"
-        },
-        "S3": {
-            "topic": "CQ",
+            "topic": "DSA",
             "ignore": false,
             "assignee": "SR"
         },
+        "S3": {
+            "topic": "OOP",
+            "ignore": false,
+            "assignee": "OM"
+        },
         "S4": {
-            "topic": "VA",
+            "topic": "DBMS",
             "ignore": false,
             "assignee": "KL"
         },
         "S5": {
-            "topic": "OOP",
-            "ignore": false,
-            "assignee": "SR"
-        }
-    },
-    "5": {
-        "S1": {
-            "topic": "DSA",
+            "topic": "CQ",
             "ignore": false,
             "assignee": "PS"
-        },
-        "S2": {
+        }
+    },
+    "4": {
+        "S1": {
             "topic": "APPT",
             "ignore": false,
-            "assignee": "PP"
+            "assignee": "SM"
+        },
+        "S2": {
+            "topic": "DSA",
+            "ignore": false,
+            "assignee": "RG"
         },
         "S3": {
-            "topic": "CQ",
+            "topic": "CNS",
             "ignore": false,
             "assignee": "RG"
         },
         "S4": {
             "topic": "DBMS",
             "ignore": false,
-            "assignee": "AS"
+            "assignee": "MS"
         },
         "S5": {
-            "topic": "",
-            "assignee": ""
-        }
-    },
-    "6": {
-        "S1": {
-            "topic": "DSA",
-            "ignore": false,
-            "assignee": "PP"
-        },
-        "S2": {
-            "topic": "CNS",
-            "ignore": false,
-            "assignee": "OM"
-        },
-        "S3": {
             "topic": "CQ",
             "ignore": false,
-            "assignee": "OM"
+            "assignee": "PP"
+        }
+    },
+    "5": {
+        "S1": {
+            "topic": "APPT",
+            "ignore": false,
+            "assignee": "MP"
+        },
+        "S2": {
+            "topic": "DSA",
+            "ignore": false,
+            "assignee": "MP"
+        },
+        "S3": {
+            "topic": "CNS",
+            "ignore": false,
+            "assignee": "AS"
         },
         "S4": {
             "topic": "DBMS",
             "ignore": false,
+            "assignee": "PP"
+        },
+        "S5": {
+            "topic": "CQ",
+            "ignore": false,
+            "assignee": "KL"
+        }
+    },
+    "6": {
+        "S1": {
+            "topic": "APPT",
+            "ignore": false,
+            "assignee": "SR"
+        },
+        "S2": {
+            "topic": "DSA",
+            "ignore": false,
+            "assignee": "OM"
+        },
+        "S3": {
+            "topic": "CNS",
+            "ignore": false,
             "assignee": "NM"
+        },
+        "S4": {
+            "topic": "CQ",
+            "ignore": false,
+            "assignee": "OM"
         },
         "S5": {
             "topic": "",
