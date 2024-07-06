@@ -1,13 +1,27 @@
 [
     {
-        "name": "Coding Questions",
-        "code": "CQ",
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
         "slots": 7,
         "coverage": [
+            "SM",
+            "KL",
+            "NM",
+            "AS",
             "OM",
-            "PP",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
             "PS",
-            "MS",
+            "SM",
+            "PP",
             "KL",
             "NM",
             "AS"
@@ -19,15 +33,9 @@
         "code": "DBMS",
         "slots": 3,
         "coverage": [
-            "PP",
-            "MS",
-            "KL",
-            "OM",
-            "RG",
-            "MP",
-            "NM",
-            "AS",
-            "SR"
+            "SM",
+            "PS",
+            "KL"
         ],
         "ignore": []
     },
@@ -38,36 +46,10 @@
         "coverage": [
             "MP",
             "MS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "PP",
-            "PS",
-            "MS",
             "KL",
             "NM",
             "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "MS",
-            "OM",
-            "RG"
+            "OM"
         ],
         "ignore": []
     },
@@ -79,17 +61,24 @@
             "RG",
             "SR",
             "PP",
-            "MP"
+            "MP",
+            "OM",
+            "SM",
+            "PS",
+            "MS"
         ],
         "ignore": []
     },
     {
-        "name": "Aptitude",
-        "code": "APPT",
+        "name": "Computer Networking & Security",
+        "code": "CNS",
         "slots": 3,
         "coverage": [
-            "PS",
-            "SM",
+            "MS",
+            "OM",
+            "RG",
+            "SR",
+            "MP",
             "PP"
         ],
         "ignore": []
@@ -100,7 +89,23 @@
         "slots": 3,
         "coverage": [
             "SM",
-            "PS"
+            "PS",
+            "RG",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "RG",
+            "MP",
+            "PP",
+            "PS",
+            "MS"
         ],
         "ignore": []
     }
