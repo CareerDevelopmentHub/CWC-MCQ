@@ -1,27 +1,27 @@
 [
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
         "coverage": [
             "SM",
+            "PS",
             "KL",
             "NM",
             "AS",
-            "OM",
-            "RG",
-            "SR"
+            "OM"
         ],
         "ignore": []
     },
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
         "coverage": [
-            "PS",
-            "SM",
+            "MP",
             "PP",
+            "PS",
+            "MS",
             "KL",
             "NM",
             "AS"
@@ -29,13 +29,18 @@
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
+        "name": "Verbal Ability",
+        "code": "VA",
         "slots": 3,
         "coverage": [
             "SM",
             "PS",
-            "KL"
+            "RG",
+            "SR",
+            "MP",
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -49,23 +54,10 @@
             "KL",
             "NM",
             "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
+            "OM",
             "RG",
             "SR",
-            "PP",
-            "MP",
-            "OM",
-            "SM",
-            "PS",
-            "MS"
+            "SM"
         ],
         "ignore": []
     },
@@ -79,17 +71,19 @@
             "RG",
             "SR",
             "MP",
-            "PP"
+            "PP",
+            "KL",
+            "SM",
+            "PS"
         ],
         "ignore": []
     },
     {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "SM",
-            "PS",
+            "OM",
             "RG",
             "SR",
             "MP"
@@ -101,11 +95,23 @@
         "code": "CQ",
         "slots": 7,
         "coverage": [
+            "OM",
+            "SR",
+            "SM",
             "RG",
             "MP",
             "PP",
-            "PS",
-            "MS"
+            "PS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "MS",
+            "PP"
         ],
         "ignore": []
     }
