@@ -1,39 +1,29 @@
 [
     {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "SR",
+            "SM",
+            "PP",
+            "KL",
+            "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
         "coverage": [
             "PP",
             "PS",
-            "MS",
+            "OM",
             "KL",
             "NM",
-            "AS",
-            "OM",
-            "RG"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "MS",
-            "KL"
+            "AS"
         ],
         "ignore": []
     },
@@ -47,7 +37,22 @@
             "MS",
             "KL",
             "NM",
-            "AS"
+            "AS",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
+            "SR",
+            "MP",
+            "SM",
+            "KL"
         ],
         "ignore": []
     },
@@ -56,24 +61,41 @@
         "code": "CQ",
         "slots": 7,
         "coverage": [
+            "PP",
+            "PS",
+            "MS",
             "NM",
             "AS",
             "OM",
-            "RG",
-            "SR",
-            "MP",
-            "SM"
+            "RG"
         ],
         "ignore": []
     },
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
+        "name": "Aptitude",
+        "code": "APPT",
         "slots": 3,
         "coverage": [
-            "PP",
+            "MP",
+            "MS",
+            "KL",
+            "OM",
+            "RG",
+            "SR"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
             "PS",
-            "OM"
+            "MS",
+            "KL",
+            "MP",
+            "SM",
+            "PP"
         ],
         "ignore": []
     },
@@ -82,24 +104,11 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "RG",
-            "SR",
             "MP",
             "SM",
             "PP",
             "PS",
             "MS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "SR",
-            "SM",
-            "PP"
         ],
         "ignore": []
     }
