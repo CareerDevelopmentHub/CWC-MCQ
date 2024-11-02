@@ -1,91 +1,18 @@
 [
     {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
         "coverage": [
+            "RG",
             "SR",
-            "MP",
-            "SM",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG"
+            "KL"
         ],
         "ignore": []
     },
     {
         "name": "Aptitude",
         "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "MS",
-            "KL",
-            "OM",
-            "RG",
-            "SR",
-            "NM",
-            "AS",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
-            "KL",
-            "MP",
-            "SM",
-            "PP",
-            "NM",
-            "AS",
-            "OM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Database Management System",
-        "code": "DBMS",
-        "slots": 3,
-        "coverage": [
-            "SR",
-            "SM",
-            "PP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "PP",
-            "PS",
-            "OM",
-            "KL",
-            "NM",
-            "AS",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
         "slots": 3,
         "coverage": [
             "PP",
@@ -99,13 +26,61 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
+            "NM",
+            "AS",
+            "OM",
+            "RG",
             "KL",
             "SR",
-            "MP",
-            "SM",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
             "PP",
             "PS",
-            "MS"
+            "MS",
+            "NM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "PS",
+            "KL",
+            "NM",
+            "AS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Database Management System",
+        "code": "DBMS",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "SM",
+            "MS",
+            "OM"
         ],
         "ignore": []
     },
@@ -114,12 +89,11 @@
         "code": "CQ",
         "slots": 7,
         "coverage": [
-            "KL",
+            "RG",
+            "MP",
             "SR",
             "SM",
-            "PP",
-            "PS",
-            "MS"
+            "PP"
         ],
         "ignore": []
     }
