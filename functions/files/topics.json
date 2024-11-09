@@ -6,18 +6,10 @@
         "coverage": [
             "RG",
             "SR",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "PP",
-            "PS",
-            "KL"
+            "KL",
+            "NM",
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
@@ -26,31 +18,19 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "KL",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
+            "SM",
             "PP",
             "PS",
             "MS",
-            "NM"
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
     {
-        "name": "Verbal Ability",
-        "code": "VA",
+        "name": "Aptitude",
+        "code": "APPT",
         "slots": 3,
         "coverage": [
             "PP",
@@ -69,7 +49,25 @@
         "coverage": [
             "PS",
             "MS",
-            "AS"
+            "AS",
+            "KL",
+            "OM",
+            "RG"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "KL",
+            "PS",
+            "MS",
+            "RG",
+            "SR",
+            "MP",
+            "SM"
         ],
         "ignore": []
     },
@@ -80,20 +78,33 @@
         "coverage": [
             "SM",
             "MS",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "MP"
         ],
         "ignore": []
     },
     {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "RG",
-            "MP",
             "SR",
+            "MP",
             "SM",
             "PP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "MS",
+            "PP",
+            "PS"
         ],
         "ignore": []
     }
