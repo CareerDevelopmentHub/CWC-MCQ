@@ -1,46 +1,15 @@
 [
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "SR",
-            "MP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
         "name": "Aptitude",
         "code": "APPT",
         "slots": 3,
         "coverage": [
             "OM",
             "PS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "SM",
-            "PP",
             "KL",
             "NM",
             "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
+            "RG"
         ],
         "ignore": []
     },
@@ -51,19 +20,7 @@
         "coverage": [
             "NM",
             "AS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
             "KL",
-            "NM",
-            "AS",
-            "MP",
             "OM",
             "RG",
             "SR"
@@ -75,13 +32,13 @@
         "code": "CQ",
         "slots": 7,
         "coverage": [
+            "KL",
+            "OM",
+            "RG",
+            "PP",
             "NM",
             "AS",
-            "PS",
-            "MS",
-            "SR",
-            "MP",
-            "SM"
+            "SR"
         ],
         "ignore": []
     },
@@ -92,7 +49,10 @@
         "coverage": [
             "SM",
             "PP",
-            "PS"
+            "PS",
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -102,6 +62,44 @@
         "slots": 4,
         "coverage": [
             "PP",
+            "MS",
+            "KL",
+            "OM",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "PP",
+            "MS",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
+        "coverage": [
+            "SM",
+            "PP",
+            "PS",
             "MS"
         ],
         "ignore": []
