@@ -1,29 +1,24 @@
 [
     {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "OM",
             "PS",
             "KL",
             "NM",
-            "AS",
-            "RG",
-            "SR",
-            "MP",
-            "SM"
+            "AS"
         ],
         "ignore": []
     },
     {
-        "name": "Software Development",
-        "code": "SD",
+        "name": "Verbal Ability",
+        "code": "VA",
         "slots": 3,
         "coverage": [
-            "SM",
-            "PP",
             "PS",
+            "MS",
+            "MP",
             "KL",
             "NM",
             "AS",
@@ -38,10 +33,6 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
             "KL",
             "NM",
             "AS",
@@ -53,16 +44,17 @@
         "ignore": []
     },
     {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
         "coverage": [
-            "PS",
-            "MS",
-            "MP",
-            "KL",
             "NM",
-            "AS"
+            "AS",
+            "RG",
+            "SR",
+            "MP",
+            "SM",
+            "KL"
         ],
         "ignore": []
     },
@@ -71,46 +63,20 @@
         "code": "DBMS",
         "slots": 3,
         "coverage": [
-            "NM",
-            "AS",
-            "KL",
-            "OM",
-            "RG",
-            "SR",
-            "MP",
-            "SM",
-            "PP"
+            "PS",
+            "MS",
+            "OM"
         ],
         "ignore": []
     },
     {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
         "coverage": [
             "PP",
             "MS",
-            "KL",
-            "OM",
-            "SR",
-            "MP",
-            "NM",
-            "AS",
-            "RG",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
-            "PS",
-            "MS",
-            "KL",
-            "OM",
-            "PP"
+            "MP"
         ],
         "ignore": []
     },
@@ -119,9 +85,20 @@
         "code": "CNS",
         "slots": 3,
         "coverage": [
-            "PS",
+            "SM",
             "PP",
-            "MS"
+            "PS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "MS",
+            "SM",
+            "PP"
         ],
         "ignore": []
     }
