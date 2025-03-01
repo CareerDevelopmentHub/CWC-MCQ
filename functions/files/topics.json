@@ -1,37 +1,27 @@
 [
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "MP",
-            "MS",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "OM",
-            "RG",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
         "name": "Coding Questions",
         "code": "CQ",
         "slots": 7,
         "coverage": [
-            "SM",
-            "PP",
-            "PS",
-            "MS",
+            "OM",
+            "RG",
+            "SR",
+            "MP",
             "KL",
             "NM",
+            "AS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
+        "coverage": [
+            "KL",
+            "NM",
+            "MP",
             "AS"
         ],
         "ignore": []
@@ -43,7 +33,24 @@
         "coverage": [
             "SM",
             "PP",
-            "NM"
+            "NM",
+            "KL",
+            "AS",
+            "OM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "OM",
+            "RG",
+            "KL",
+            "NM",
+            "SR",
+            "MP"
         ],
         "ignore": []
     },
@@ -52,46 +59,13 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP",
-            "SM"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
-        "coverage": [
-            "SM",
             "PP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
-        "coverage": [
-            "SM",
-            "PP",
+            "PS",
             "MS",
-            "RG",
-            "AS",
             "OM",
+            "RG",
             "SR",
-            "PS"
+            "SM"
         ],
         "ignore": []
     },
@@ -100,9 +74,33 @@
         "code": "SD",
         "slots": 3,
         "coverage": [
-            "PP",
+            "RG",
+            "SM",
+            "PP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "MP",
             "MS",
+            "KL",
+            "SM",
+            "PP",
             "PS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Verbal Ability",
+        "code": "VA",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS"
         ],
         "ignore": []
     }
