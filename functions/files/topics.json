@@ -1,28 +1,33 @@
 [
     {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
         "coverage": [
-            "OM",
-            "RG",
-            "SR",
             "MP",
+            "MS",
             "KL",
+            "SM",
+            "PP",
+            "PS",
             "NM",
-            "AS"
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
     {
-        "name": "Object-Oriented Programming",
-        "code": "OOP",
-        "slots": 4,
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
         "coverage": [
             "KL",
             "NM",
+            "AS",
             "MP",
-            "AS"
+            "OM",
+            "RG",
+            "SR"
         ],
         "ignore": []
     },
@@ -36,7 +41,10 @@
             "NM",
             "KL",
             "AS",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "MP"
         ],
         "ignore": []
     },
@@ -50,22 +58,10 @@
             "KL",
             "NM",
             "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "PP",
-            "PS",
-            "MS",
-            "OM",
-            "RG",
-            "SR",
-            "SM"
+            "MP",
+            "AS",
+            "SM",
+            "PP"
         ],
         "ignore": []
     },
@@ -76,21 +72,26 @@
         "coverage": [
             "RG",
             "SM",
-            "PP"
+            "PP",
+            "KL",
+            "NM",
+            "OM"
         ],
         "ignore": []
     },
     {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
+        "name": "Object-Oriented Programming",
+        "code": "OOP",
+        "slots": 4,
         "coverage": [
-            "MP",
-            "MS",
             "KL",
+            "NM",
+            "MP",
+            "AS",
+            "RG",
+            "SR",
             "SM",
-            "PP",
-            "PS"
+            "PP"
         ],
         "ignore": []
     },
@@ -99,6 +100,20 @@
         "code": "VA",
         "slots": 3,
         "coverage": [
+            "PS",
+            "MS",
+            "KL",
+            "MP",
+            "SM"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "PP",
             "PS",
             "MS"
         ],
