@@ -1,30 +1,14 @@
 [
     {
-        "name": "Data Structure and Algorithms",
-        "code": "DSA",
-        "slots": 7,
-        "coverage": [
-            "SM",
-            "PP",
-            "MP",
-            "KL",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "PS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Software Development",
-        "code": "SD",
+        "name": "Database Management System",
+        "code": "DBMS",
         "slots": 3,
         "coverage": [
             "PS",
             "MS",
-            "KL"
+            "KL",
+            "NM",
+            "AS"
         ],
         "ignore": []
     },
@@ -38,7 +22,10 @@
             "NM",
             "KL",
             "AS",
-            "OM"
+            "OM",
+            "RG",
+            "SR",
+            "MP"
         ],
         "ignore": []
     },
@@ -47,14 +34,10 @@
         "code": "OOP",
         "slots": 4,
         "coverage": [
-            "OM",
-            "PS",
-            "MS",
-            "KL",
-            "NM",
-            "AS",
-            "RG",
-            "SR"
+            "MP",
+            "SM",
+            "PP",
+            "KL"
         ],
         "ignore": []
     },
@@ -63,24 +46,28 @@
         "code": "CQ",
         "slots": 7,
         "coverage": [
-            "SM",
+            "KL",
+            "AS",
+            "PS",
+            "MS",
             "NM",
             "OM",
-            "RG",
-            "SR",
-            "MP",
-            "PP"
+            "RG"
         ],
         "ignore": []
     },
     {
-        "name": "Verbal Ability",
-        "code": "VA",
-        "slots": 3,
+        "name": "Data Structure and Algorithms",
+        "code": "DSA",
+        "slots": 7,
         "coverage": [
-            "PP",
-            "MP",
-            "SM"
+            "MS",
+            "NM",
+            "AS",
+            "OM",
+            "RG",
+            "SR",
+            "MP"
         ],
         "ignore": []
     },
@@ -94,17 +81,35 @@
             "KL",
             "MP",
             "SM",
+            "PP",
+            "OM",
+            "PS",
+            "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Software Development",
+        "code": "SD",
+        "slots": 3,
+        "coverage": [
+            "PS",
+            "MS",
+            "KL",
+            "SR",
+            "SM",
             "PP"
         ],
         "ignore": []
     },
     {
-        "name": "Database Management System",
-        "code": "DBMS",
+        "name": "Verbal Ability",
+        "code": "VA",
         "slots": 3,
         "coverage": [
             "PS",
-            "MS"
+            "SM",
+            "PP"
         ],
         "ignore": []
     }
