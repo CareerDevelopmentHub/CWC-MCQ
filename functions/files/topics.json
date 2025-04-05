@@ -8,24 +8,10 @@
             "MS",
             "KL",
             "NM",
-            "AS"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Aptitude",
-        "code": "APPT",
-        "slots": 3,
-        "coverage": [
-            "PS",
-            "MS",
-            "NM",
-            "KL",
             "AS",
             "OM",
             "RG",
-            "SR",
-            "MP"
+            "SR"
         ],
         "ignore": []
     },
@@ -37,20 +23,9 @@
             "MP",
             "SM",
             "PP",
-            "KL"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Coding Questions",
-        "code": "CQ",
-        "slots": 7,
-        "coverage": [
             "KL",
-            "AS",
-            "PS",
-            "MS",
             "NM",
+            "AS",
             "OM",
             "RG"
         ],
@@ -61,30 +36,13 @@
         "code": "DSA",
         "slots": 7,
         "coverage": [
-            "MS",
-            "NM",
-            "AS",
-            "OM",
-            "RG",
-            "SR",
-            "MP"
-        ],
-        "ignore": []
-    },
-    {
-        "name": "Computer Networking & Security",
-        "code": "CNS",
-        "slots": 3,
-        "coverage": [
-            "RG",
-            "SR",
             "KL",
-            "MP",
             "SM",
             "PP",
-            "OM",
             "PS",
-            "MS"
+            "NM",
+            "AS",
+            "OM"
         ],
         "ignore": []
     },
@@ -98,7 +56,47 @@
             "KL",
             "SR",
             "SM",
-            "PP"
+            "PP",
+            "NM",
+            "AS",
+            "RG"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Coding Questions",
+        "code": "CQ",
+        "slots": 7,
+        "coverage": [
+            "SR",
+            "MP",
+            "SM",
+            "PP",
+            "KL",
+            "PS",
+            "MS"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Computer Networking & Security",
+        "code": "CNS",
+        "slots": 3,
+        "coverage": [
+            "KL",
+            "SR",
+            "MP"
+        ],
+        "ignore": []
+    },
+    {
+        "name": "Aptitude",
+        "code": "APPT",
+        "slots": 3,
+        "coverage": [
+            "SM",
+            "PP",
+            "MP"
         ],
         "ignore": []
     },
@@ -107,9 +105,8 @@
         "code": "VA",
         "slots": 3,
         "coverage": [
-            "PS",
-            "SM",
-            "PP"
+            "MS",
+            "PS"
         ],
         "ignore": []
     }
